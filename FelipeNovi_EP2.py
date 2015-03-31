@@ -99,3 +99,10 @@ def PernaEsquerda():
     pernaE.right(60)
     pernaE.forward(50)
 #final das funções do boneco
+    
+#desenha as "casas" das letras
+linhas=turtle.Turtle()
+linhas.color("yellow")
+linhas.penup()
+linhas.setpos(-250,-50)
+linhas.pendown()
