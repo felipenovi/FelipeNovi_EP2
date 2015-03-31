@@ -134,4 +134,20 @@ for i in range(0, len(palavra_escolhida)):
         linhas.penup()
         linhas.forward(10)
         
+#Jogo:
+erros = 0
+acertos = 0
+while erros<6 and acertos<len(palavra_escolhida):
+    chute = window.textinput("Chutômetro", "Escolha uma letra")
+    while len(chute) != 1:
+        chute = window.textinput("Chutômetro", "Escolha uma letra")
+    iniciar = 0
+    while iniciar != -1:
+        iniciar = palavra_escolhida.find(chute, iniciar)    
+        if iniciar!=-1:
+            linhas.setpos(-250+30*iniciar,-50)
+            linhas.write(palavra_escolhida[iniciar],font=("Comic Sans MS",20,"normal"))
+            acertos += 1
+            iniciar += 1
+        
 window.exitonclick()
