@@ -149,5 +149,20 @@ while erros<6 and acertos<len(palavra_escolhida):
             linhas.write(palavra_escolhida[iniciar],font=("Comic Sans MS",20,"normal"))
             acertos += 1
             iniciar += 1
+    #Em caso de erros:
+    if chute not in palavra_escolhida:
+        erros += 1
+        if erros == 1:
+            Cabeça()
+        if erros == 2:
+            Corpo()
+        if erros == 3:
+            BraçoDireito()
+        if erros == 4:
+            BraçoEsquerdo()
+        if erros == 5:
+            PernaDireita()
+        if erros == 6:
+            PernaEsquerda()
         
 window.exitonclick()
