@@ -7,6 +7,10 @@ Created on Tue Mar 31 14:35:44 2015
 
 import turtle
 
+window = turtle.Screen()    # cria uma janela
+window.bgcolor("blue")
+window.title("Jogo da Forca")
+
 forca = turtle.Turtle()  # Cria um objeto "desenhador"
 forca.hideturtle
 forca.speed(2)  # velocidade do desenho
@@ -110,9 +114,10 @@ for i in range(0, len(palavra_escolhida)):
     if i == " ":
             linhas.penup()
             linhas.forward(30)
-           
     if i != " ":   
         linhas.pendown()
         linhas.forward(20)
         linhas.penup()
         linhas.forward(10)
+        
+window.exitonclick()
