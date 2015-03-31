@@ -11,6 +11,15 @@ window = turtle.Screen()    # cria uma janela
 window.bgcolor("blue")
 window.title("Jogo da Forca")
 
+#importa a lista de palavras
+arquivo=open("entrada.txt", encoding="utf-8")
+leitura = arquivo.readlines()
+lista = [] #criar uma lista limpa
+for palavra in leitura: 
+    palavraL = palavra.strip()
+    if palavraL !="":
+        lista.append(palavraL)
+
 forca = turtle.Turtle()  # Cria um objeto "desenhador"
 forca.hideturtle
 forca.speed(2)  # velocidade do desenho
