@@ -19,6 +19,11 @@ for palavra in leitura:
     palavraL = palavra.strip()
     if palavraL !="":
         lista.append(palavraL)
+#escolher a palavra da lista
+from random import choice
+palavra_escolhida = choice(lista).lower() #escolhe a palavra
+print(palavra_escolhida)
+print(len(palavra_escolhida))
 
 forca = turtle.Turtle()  # Cria um objeto "desenhador"
 forca.hideturtle
