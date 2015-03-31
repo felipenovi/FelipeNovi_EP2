@@ -106,3 +106,13 @@ linhas.color("yellow")
 linhas.penup()
 linhas.setpos(-250,-50)
 linhas.pendown()
+for i in range(0, len(palavra_escolhida)):
+    if i == " ":
+            linhas.penup()
+            linhas.forward(30)
+           
+    if i != " ":   
+        linhas.pendown()
+        linhas.forward(20)
+        linhas.penup()
+        linhas.forward(10)
